@@ -1,21 +1,19 @@
-This is a invoices API.
+# Invoices API.
 
-How to use:
+## Setup
 
-Download and extract the files present in the zip file into a folder. (say backend)
+* Download and extract the files present in the zip file into a folder. (say backend)
+* Open VS CODE in that folder and type "npm install" to install all dependencies.
+* Once the dependencies were installed, the api is ready to use.
+* Start the server using "nodemon index"
+* In console, if "server is running" is been shown then we are good to go.
 
-Open VS CODE in that folder and type "npm install" to install all dependencies.
+## How to use
 
-Once the dependencies were installed, the api is ready to use.
-
-Start the server using "nodemon index"
-
-In console, if "server is running" is been shown then we are good to go.
-
-To enter a shop details, customer details and items purchased details, go to "/addDetails" route of the localhost:5000.
+* To enter a shop details, customer details and items purchased details, go to "/addDetails" route of the localhost:5000.
 i.e., go to "http://localhost:5000/addDetails".
 
-To add details in Postman, send a POST request of JSON body with array of shop object, customer object, items object.
+* To add details in Postman, send a POST request of JSON body with array of shop object, customer object, items object.
 for example, 
 
 JSON = [
@@ -54,11 +52,11 @@ JSON = [
 
 (Totals are calculated automatically.)
 
-Hence, add different shop details, customers details (linked to particular shops automatically), items (linked to particular customer automatically).
+* Hence, add different shop details, customers details (linked to particular shops automatically), items (linked to particular customer automatically).
 
-Once all the data was added. We can perform different operations to see the data as convineint as possible.
+* Once all the data was added. We can perform different operations to see the data as convineint as possible.
 
-To display items transacted, sorted by customer name and number, go to "/byCustomer" route of the localhost:5000.
+* To display items transacted, sorted by customer name and number, go to "/byCustomer" route of the localhost:5000.
 i.e., go to "http://localhost:5000/byCustomer".
 
 Send a GET request to the route with a JSON Body of format as below:
@@ -69,7 +67,7 @@ Send a GET request to the route with a JSON Body of format as below:
 
 then you will receive all the items that customer has purchased differentiated by ShopIds.
 
-To display customers and total amount they spent during a time period, go to "/byDate" route of the localhost:5000.
+* To display customers and total amount they spent during a time period, go to "/byDate" route of the localhost:5000.
 i.e., go to "http://localhost:5000/byDate".
 
 Send a GET request to the route with a JSON Body of format as below:
@@ -82,7 +80,7 @@ i.e., the date is of "YY-MM-DDTHH:MM:SSZ" this format.
 this will be easy if there's a frontend date element.
 Hence you will receive all the customers and total amount they spent during a time period.
 
-To display customers and items they bought of a particular shop, go to "/byShop" route of the localhost:5000.
+* To display customers and items they bought of a particular shop, go to "/byShop" route of the localhost:5000.
 i.e., go to "http://localhost:5000/byShop".
 
 Send a GET request to the route with a JSON Body of format as below:
